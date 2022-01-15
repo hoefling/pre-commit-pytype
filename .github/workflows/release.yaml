@@ -17,7 +17,7 @@ jobs:
       - name: Apply new version
         run: |
           echo ${{ env.NEW_VERSION }} > .version
-          sed -i '' 's/${{ env.OLD_VERSION }}/${{ env.NEW_VERSION }}/g' README.md
+          sed -i 's/${{ env.OLD_VERSION }}/${{ env.NEW_VERSION }}/g' README.md
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
