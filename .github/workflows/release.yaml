@@ -13,11 +13,11 @@ jobs:
       - name: Read new version
         run: |
           pip install --editable .
-          run: python -c 'from importlib.metadata import version; print("NEW_VERSION=" + version("pytype"))' >> $GITHUB_ENV
+          python -c 'from importlib.metadata import version; print("NEW_VERSION=" + version("pytype"))' >> $GITHUB_ENV
       - name: Apply new version
         run: |
           echo ${{ env.NEW_VERSION }} > .version
-          sed -i '' 's/${{ env.OLD_VERSION }}/${{ env.NEW_VERSION }}/g' README.md
+          sed -i 's/${{ env.OLD_VERSION }}/${{ env.NEW_VERSION }}/g' README.md
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
