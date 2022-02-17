@@ -5,7 +5,7 @@ Wrapper to enable pre-commit for `pytype`
 In your `.pre-commit-config.yaml` include the following block.
 
 ```
--   repo: https://github.com/mattseymour/pre-commit-pytype
+-   repo: https://github.com/hoefling/pre-commit-pytype
     rev: 2022.2.8
     hooks:
     -   id: pytype
@@ -14,10 +14,9 @@ In your `.pre-commit-config.yaml` include the following block.
 If you use `setup.cfg` instead of `--config=pytype.cfg` to run pytype then you will also need to include a empty args attribute in the pytype hook (example below).
 
 ```
--   repo: https://github.com/mattseymour/pre-commit-pytype
+-   repo: https://github.com/hoefling/pre-commit-pytype
     rev: 2022.2.8
     hooks:
     -   id: pytype
         args: []
 ```
-
