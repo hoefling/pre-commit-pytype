@@ -22,7 +22,7 @@ jobs:
           echo ${{ env.NEW_VERSION }} > .version
           sed -i 's/${{ env.OLD_VERSION }}/${{ env.NEW_VERSION }}/g' README.md
       - name: Commit changes
-        uses: EndBug/add-and-commit@v8
+        uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
           message: 'post-process pytype version bump'
