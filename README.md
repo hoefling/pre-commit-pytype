@@ -6,7 +6,7 @@ In your `.pre-commit-config.yaml` include the following block.
 
 ```
 -   repo: https://github.com/hoefling/pre-commit-pytype
-    rev: 2023.1.17
+    rev: 2023.2.9
     hooks:
     -   id: pytype
 ```
@@ -15,7 +15,7 @@ If you use `setup.cfg` instead of `--config=pytype.cfg` to run pytype then you w
 
 ```
 -   repo: https://github.com/hoefling/pre-commit-pytype
-    rev: 2023.1.17
+    rev: 2023.2.9
     hooks:
     -   id: pytype
         args: []
